@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="jumbotron-img jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Conheça mais sobre o Symfony</h1>
+        <p class="lead">Faça perguntas e responda a perguntas de outras pessoas!</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col">
+            <button class="btn btn-question">Faça uma pergunta</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div style="box-shadow: 2px 3px 9px 4px rgba(0,0,0,0.04);">
+                <div class="q-container p-4">
+                    <div class="row">
+                        <div class="col-2 text-center">
+                            <img src="/images/Miau.png" width="100" height="100">
+                            <div class="d-block mt-3 vote-arrows">
+                                <a class="vote-up" href="#"><i class="far fa-arrow-alt-circle-up"></i></a>
+                                <a class="vote-down" href="#"><i class="far fa-arrow-alt-circle-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a class="q-title" href="{{ path('pergunta', { slug: 'symfony-miau' }) }}"><h2>O Symfony é realmente bom?</h2></a>
+                            <div class="q-display p-3">
+                                <i class="fa fa-quote-left mr-3"></i>
+                                <p class="d-inline">Eu estou procurando um Framework back-end para o meu projeto de automação de compra de patês. Queria saber se o Symfony é realmente bom para que eu possa usar ele nesse projeto.</p>
+                                <p class="pt-4"><strong>--Miau</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="answer-link" href="{{ path('pergunta', { slug: 'symfony-miau' }) }}" style="color: #fff;">
+                    <p class="q-display-response text-center p-3">
+                        <i class="fa fa-magic magic-wand"></i> 3 respostas
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12 mt-3">
+            <div class="q-container p-4">
+                <div class="row">
+                    <div class="col-2 text-center">
+                        <img src="/images/Doguinho.png" width="100" height="100">
+                        <div class="d-block mt-3 vote-arrows">
+                            <a class="vote-up" href="#"><i class="far fa-arrow-alt-circle-up"></i></a>
+                            <a class="vote-down" href="#"><i class="far fa-arrow-alt-circle-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <a class="q-title" href="{{ path('pergunta', { slug: 'symfony-doguinho' }) }}"><h2>Como baixar o Twig?</h2></a>
+                        <div class="q-display p-3">
+                            <i class="fa fa-quote-left mr-3"></i>
+                            <p class="d-inline">Eu estou fazendo um site de doação de carinhos na barriga e queria usar a biblioteca Twig para meus templates. Como eu faço para baixar essa biblioteca no Symfony?</p>
+                            <p class="pt-4"><strong>--Doguinho</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="answer-link" href="{{ path('pergunta', { slug: 'symfony-doguinho' }) }}" style="color: #fff;">
+                <p class="q-display-response text-center p-3">
+                    <i class="fa fa-magic magic-wand"></i> 3 respostas
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
